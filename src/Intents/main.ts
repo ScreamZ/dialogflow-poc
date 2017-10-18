@@ -71,7 +71,6 @@ export const searchTrainsAction = async (params, dbManager: DbManager, contexts)
   moment.locale('fr');
   
   let speech;
-  console.log("Need return date : "+params["need_return_date"]);
 
   if (params["need_return_date"] === Assertion.OUI) {
     
@@ -157,11 +156,11 @@ const buildSearchTrainsParams = async(params, isReturn) => {
   
   const stationsArray = [ params.origin, params.destination ];
   
-  const stationPromises = stationsArray.map(async station => {
+  const stationPromises = stationsArray.map(async (station) => {
     const reponse = await getStation(station);
     return reponse;
-  })
-  
+  });
+
   const origin_station_id = await stationPromises[0];
   const destination_station_id = await stationPromises[1];
 

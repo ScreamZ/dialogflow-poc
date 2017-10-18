@@ -47,7 +47,8 @@ app.post("/", async (req, res, next) => {
         .then(updateRequest(req, next));
       break;
     case "search-trains":
-      searchTrainsAction(params, dbManager, contexts)
+      res.json({ "speech": "Je recherche les trajets pour vous...", "displayText": "Processing..."  });
+      searchTrainsAction(params, dbManager, contexts, res)
         .then(updateRequest(req, next));
       break;
     default:
