@@ -2,7 +2,7 @@
 
 This is a POC that process additionnal jobs in order to feed the Google AI engine.
 
-## Installation
+## Installation 1
 
 - Run `yarn` or `npm i`
 - Start building javascript bundle, using the typescript compiler. `npm run build:watch`. This will also watch for new changes.
