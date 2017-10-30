@@ -28,8 +28,8 @@ app.post("/", async (req, res, next) => {
   const params = req.body.result.parameters;
   const contexts = req.body.result.contexts;
 
-//  res.setHeader('Content-Type', 'application/json'); 
-//  res.send(JSON.stringify({ "speech": "Processing...", "displayText": "Processing..."  }));
+  //  res.setHeader('Content-Type', 'application/json');
+  //  res.send(JSON.stringify({ "speech": "Processing...", "displayText": "Processing..."  }));
 
   console.log(`=== RECEIVED NEW ACTION : ${action}`);
   // Handle specific job
@@ -47,8 +47,8 @@ app.post("/", async (req, res, next) => {
         .then(updateRequest(req, next));
       break;
     case "search-trains":
-      //res.json({ "speech": "Je recherche les trajets pour vous...", "displayText": "Processing..."  });
-      searchTrainsAction(params, dbManager, contexts, res)
+      // res.json({ "speech": "Je recherche les trajets pour vous...", "displayText": "Processing..."  });
+      searchTrainsAction(params, dbManager, contexts)
         .then(updateRequest(req, next));
       break;
     default:
