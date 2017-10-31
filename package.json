@@ -1,4 +1,4 @@
-{
+ {
   "name": "google-dialogflow-poc",
   "description": "A sample Node.js webhook for DialogFlow",
   "private": true,
@@ -29,3 +29,4 @@
     "typescript": "^2.5.3"
   }
 }
+
